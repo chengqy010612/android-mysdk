@@ -39,6 +39,7 @@ android {
     }
 }
 
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -53,6 +54,10 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     //
     implementation(libs.androidx.lifecycle.runtimeCompose)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
 
 
     testImplementation(libs.junit)
@@ -62,4 +67,15 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+
+    implementation("com.pangle.cn:ads-sdk-pro:5.6.0.7")
+//    implementation("com.pangle.cn:ads-sdk-pro:6.5.0.4")
+//    implementation(files("libs/open_ad_sdk_6.5.0.2.aar"))
+
+//微信
+    implementation("com.tencent.mm.opensdk:wechat-sdk-android:6.8.0")
+
+    //ui
+    implementation("cn.itpiggy:compose-ui:1.0.1")
 }

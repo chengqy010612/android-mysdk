@@ -7,6 +7,8 @@ pluginManagement {
                 includeGroupByRegex("androidx.*")
             }
         }
+        maven { url = uri("https://artifact.bytedance.com/repository/pangle") }
+
         mavenCentral()
         gradlePluginPortal()
     }
@@ -23,6 +25,8 @@ dependencyResolutionManagement {
             )
         }
 
+//穿山甲
+        maven { url = uri("https://artifact.bytedance.com/repository/pangle") }
 
         google()
         mavenCentral()
