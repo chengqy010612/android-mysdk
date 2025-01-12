@@ -16,6 +16,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters += listOf("armeabi", "armeabi-v7a", "arm64-v8a")
+        }
     }
 
     buildTypes {
@@ -78,4 +82,19 @@ dependencies {
 
     //ui
     implementation("cn.itpiggy:compose-ui:1.0.1")
+
+//视频
+    implementation("io.sanghun:compose-video:1.2.0")
+    implementation("androidx.media3:media3-exoplayer:1.1.0") // [Required] androidx.media3 ExoPlayer依赖
+    implementation("androidx.media3:media3-session:1.1.0") // [Required] MediaSession扩展依赖
+    implementation("androidx.media3:media3-ui:1.1.0") // [Required] 基础播放器UI
+
+    implementation("androidx.media3:media3-exoplayer-dash:1.1.0") // [Optional] 如果你的媒体项是DASH
+    implementation("androidx.media3:media3-exoplayer-hls:1.1.0") // [Optional] 如果你的媒体项是HLS (m3u8..)
+
+
+    implementation("com.tencent.liteav:LiteAVSDK_Player_Premium:latest.release")
+
+
+//    implementation(files("./libs/LiteAVSDK_Professional_12.2.0.15072.aar"))
 }

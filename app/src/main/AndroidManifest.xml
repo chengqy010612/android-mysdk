@@ -3,17 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-<!--    广告-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 广告 -->
     <permission
         android:name="${applicationId}.openadsdk.permission.TT_PANGOLIN"
         android:protectionLevel="signature" />
+
     <uses-permission android:name="${applicationId}.openadsdk.permission.TT_PANGOLIN" />
 
-    <queries>
-        <package android:name="com.tencent.mm" />
-    </queries>
+<!--    <queries>-->
+<!--        <package android:name="com.tencent.mm" />-->
+<!--    </queries>-->
+
+<!--tx视频-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
 
     <application
         android:allowBackup="true"
@@ -23,9 +32,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
-        <!--        android:theme="@style/Theme.ClientApp"-->
+        <activity
+            android:name="com.missgem.hwhnhl.activity.TestActivity"
+            android:exported="false" />
+<!--         android:theme="@style/Theme.ClientApp"-->
         <activity
             android:name="com.missgem.hwhnhl.test.TestActivity"
             android:exported="false" />
@@ -52,8 +64,6 @@
                 android:value="" />
         </activity>
 
-
-
         <provider
             android:name="com.bytedance.sdk.openadsdk.TTFileProvider"
             android:authorities="${applicationId}.TTFileProvider"
@@ -62,30 +72,11 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
-        </provider>
-        <!--穿山甲SDK-->
+        </provider> <!-- 穿山甲SDK -->
         <provider
             android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
             android:authorities="${applicationId}.TTMultiProvider"
             android:exported="false" />
-        <!--  广告  -->
-        <!-- 穿山甲 start================== -->
-<!--        <provider-->
-<!--            android:name="com.bytedance.sdk.openadsdk.TTFileProvider"-->
-<!--            android:authorities="${applicationId}.TTFileProvider"-->
-<!--            android:exported="false"-->
-<!--            android:grantUriPermissions="true">-->
-<!--            <meta-data-->
-<!--                android:name="android.support.FILE_PROVIDER_PATHS"-->
-<!--                android:resource="@xml/file_paths" />-->
-<!--        </provider>-->
-
-<!--        <provider-->
-<!--            android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"-->
-<!--            android:authorities="${applicationId}.TTMultiProvider"-->
-<!--            android:exported="false" />-->
-        <!-- 穿山甲 end================== -->
-
     </application>
 
 </manifest>

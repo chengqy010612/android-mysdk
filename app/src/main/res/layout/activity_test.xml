@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     tools:context="com.missgem.hwhnhl.test.TestActivity">
 
     <TextView
@@ -13,14 +14,30 @@
         android:text="test页面"
         />
 
-    <LinearLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" />
+    <!-- 播放器组件-->
+<!--    <com.tencent.rtmp.ui.TXCloudVideoView-->
+<!--        android:id="@+id/video_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        />-->
 
-    <include
-        android:id="@+id/header_layout"
-        layout="@layout/recycler_view" />
+<!--    <com.tencent.rtmp.ui.TXCloudVideoView-->
+<!--        xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--        android:id="@+id/video_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        />-->
+
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/fragment_container"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal" />-->
+
+<!--    <include-->
+<!--        android:id="@+id/header_layout"-->
+<!--        layout="@layout/recycler_view" />-->
+
 
 </LinearLayout>

@@ -12,6 +12,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -30,8 +31,8 @@ import com.bytedance.sdk.openadsdk.TTAdNative
 import com.bytedance.sdk.openadsdk.TTAdSdk
 import com.bytedance.sdk.openadsdk.TTNativeExpressAd
 import com.example.clientapp.R
+import com.missgem.hwhnhl.activity.TestActivity
 import com.missgem.hwhnhl.feature.splash.SplashRoute
-import com.missgem.hwhnhl.test.TestActivity
 import com.missgem.hwhnhl.ui.MyApp
 import com.missgem.hwhnhl.ui.theme.ClientAppTheme
 import com.missgem.hwhnhl.util.TTAdManagerHolder
@@ -57,10 +58,17 @@ class MainActivity : ComponentActivity() {
             ClientAppTheme {
                 CompositionLocalProvider(LocalNavController provides navController) {
                     MyApp(navController = navController)
+                    Text("123")
+                    Button(onClick = {
+                        val intent = Intent(this, TestActivity::class.java)
+                        startActivity(intent)
+                    }) {
+                        Text(text =  "测试")
+                    }
 //                    Button(onClick = {
-////                    wcLogin()
-////                        val intent = Intent(this, TestActivity::class.java)
-////                        startActivity(intent)
+//////                    wcLogin()
+//                        val intent = Intent(this, TestActivity::class.java)
+//                        startActivity(intent)
 //                    }) {
 //                        Text(text =  "测试")
 //                    }
