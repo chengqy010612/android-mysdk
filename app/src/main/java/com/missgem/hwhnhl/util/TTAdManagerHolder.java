@@ -1,9 +1,7 @@
 package com.missgem.hwhnhl.util;
 //package com.unity3d.player.chuanshanjia;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -14,9 +12,6 @@ import com.bytedance.sdk.openadsdk.TTCustomController;
 //import com.bytedance.sdk.openadsdk.mediation.init.MediationConfigUserInfoForSegment;
 //import com.bytedance.sdk.openadsdk.mediation.init.MediationPrivacyConfig;
 //import com.union_test.toutiao.SelectActivity;
-
-import java.util.HashMap;
-import java.util.Map;
 
 
 /**

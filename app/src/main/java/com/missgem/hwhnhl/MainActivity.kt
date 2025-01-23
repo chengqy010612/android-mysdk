@@ -1,15 +1,9 @@
 package com.missgem.hwhnhl
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.ViewGroup
-import android.widget.Button
-import android.widget.FrameLayout
 import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.activity.ComponentActivity
-import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.material3.Button
@@ -18,7 +12,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
@@ -29,13 +22,11 @@ import com.bytedance.sdk.openadsdk.TTAdConfig
 import com.bytedance.sdk.openadsdk.TTAdConstant
 import com.bytedance.sdk.openadsdk.TTAdNative
 import com.bytedance.sdk.openadsdk.TTAdSdk
-import com.bytedance.sdk.openadsdk.TTNativeExpressAd
+import com.chengqingyuan.mylibrary.PubTest
 import com.example.clientapp.R
-import com.missgem.hwhnhl.activity.TestActivity
 import com.missgem.hwhnhl.feature.splash.SplashRoute
 import com.missgem.hwhnhl.ui.MyApp
 import com.missgem.hwhnhl.ui.theme.ClientAppTheme
-import com.missgem.hwhnhl.util.TTAdManagerHolder
 import com.missgem.hwhnhl.util.UIUtils
 import com.tencent.mm.opensdk.modelmsg.SendAuth
 import com.tencent.mm.opensdk.openapi.WXAPIFactory
@@ -60,8 +51,12 @@ class MainActivity : ComponentActivity() {
                     MyApp(navController = navController)
                     Text("123")
                     Button(onClick = {
-                        val intent = Intent(this, TestActivity::class.java)
-                        startActivity(intent)
+//                        val intent = Intent(this, TestActivity::class.java)
+//                        startActivity(intent)
+
+//                        wcLogin()
+                        Log.e(TAG, PubTest.hello())
+
                     }) {
                         Text(text =  "测试")
                     }
@@ -227,12 +222,12 @@ class MainActivity : ComponentActivity() {
 //    }
 
     fun wcLogin() {
-        Log.e(TAG, "点击")
+//        Log.e(TAG, "点击")
+        val appId = "wxb831fa507033254e"
         //发起登陆请求前先注册微信api
-        val api = WXAPIFactory.createWXAPI(this, "wxb831fa507033254e", true);
-        api.registerApp("wxb831fa507033254e");
+        val api = WXAPIFactory.createWXAPI(this, appId, true);
+        api.registerApp(appId);
         if (!api.isWXAppInstalled()) {
-            //todo 提醒未安装微信
             return;
         }
         //开始发起登陆请求

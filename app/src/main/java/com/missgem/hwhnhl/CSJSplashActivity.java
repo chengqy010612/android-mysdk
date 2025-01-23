@@ -7,16 +7,12 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.Gravity;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.bytedance.sdk.openadsdk.AdSlot;
 import com.bytedance.sdk.openadsdk.CSJAdError;
 import com.bytedance.sdk.openadsdk.CSJSplashCloseType;
-import com.bytedance.sdk.openadsdk.TTAdConstant;
 import com.bytedance.sdk.openadsdk.TTAdNative;
 import com.bytedance.sdk.openadsdk.TTAppDownloadListener;
 import com.bytedance.sdk.openadsdk.CSJSplashAd;
@@ -31,7 +27,6 @@ import com.missgem.hwhnhl.util.UIUtils;
 //import com.union_test.toutiao.utils.UIUtils;
 //import com.union_test.toutiao.view.CountdownView;
 
-import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
 
 /**

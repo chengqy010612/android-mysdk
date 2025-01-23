@@ -18,6 +18,18 @@ activity = "1.8.0"
 constraintlayout = "2.1.4"
 
 
+
+# 官方库
+accompanist-permissions = "0.34.0"
+android-tools = "31.7.0"
+ksp = "2.0.0-1.0.21"
+room = "2.6.1"
+room-gradle-plugin = "2.6.1"
+# 三方库
+pinyin = "0.4.0"
+
+
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -45,9 +57,28 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 
 
 
+accompanist-permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanist-permissions" } # 简化权限请求
+pinyin = { module = "com.github.houbb:pinyin", version.ref = "pinyin" } # 汉字
+amap = { module = "com.amap.api:3dmap-location-search", version = "latest.integration" } # 高德地图
+
+
+# Dependencies of the included build-logic
+android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+android-tools-common = { group = "com.android.tools", name = "common", version.ref = "android-tools" }
+kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+ksp-gradle-plugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+room-gradle-plugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room-gradle-plugin" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
+
+# Plugins defined by this project
+weui-android-compose-application = { id = "weui.android.compose.application", version = "unspecified" }
+weui-android-compose-library = { id = "weui.android.compose.library", version = "unspecified" }
+weui-android-room = { id = "weui.android.room", version = "unspecified" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+
 

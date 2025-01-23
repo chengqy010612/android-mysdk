@@ -10,7 +10,13 @@
 
     <uses-permission android:name="${applicationId}.openadsdk.permission.TT_PANGOLIN" />
 
-<!--    <queries>-->
+
+<!--    微信-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+
+    <!--    <queries>-->
 <!--        <package android:name="com.tencent.mm" />-->
 <!--    </queries>-->
 
@@ -56,7 +62,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.missgem.hwhnhl.WXEntryActivity"
+            android:name="com.missgem.hwhnhl.wxapi.WXEntryActivity"
             android:exported="true"
             android:launchMode="singleTask">
             <meta-data

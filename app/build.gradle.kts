@@ -9,7 +9,9 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.clientapp"
+//        applicationId = "com.example.clientapp"
+//        applicationId = "com.bide.jushangtou"
+        applicationId = "com.missgem.hwhnhl"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
@@ -19,6 +21,16 @@ android {
 
         ndk {
             abiFilters += listOf("armeabi", "armeabi-v7a", "arm64-v8a")
+        }
+    }
+
+
+    signingConfigs {
+        create("keyStore") {
+            keyAlias = "hunanhaolao"
+            keyPassword = "hunanhaolao123"
+            storeFile = file("../ym.keystore")
+            storePassword = "hunanhaolao123"
         }
     }
 
@@ -92,9 +104,13 @@ dependencies {
     implementation("androidx.media3:media3-exoplayer-dash:1.1.0") // [Optional] 如果你的媒体项是DASH
     implementation("androidx.media3:media3-exoplayer-hls:1.1.0") // [Optional] 如果你的媒体项是HLS (m3u8..)
 
-
     implementation("com.tencent.liteav:LiteAVSDK_Player_Premium:latest.release")
 
-
+//    implementation(project(":core:ui:theme"))
+//    implementation(project(":core:ui:components"))
+//    implementation(project(":core:utils"))
 //    implementation(files("./libs/LiteAVSDK_Professional_12.2.0.15072.aar"))
+
+//    implementation("org.example.hello:0.0.3")
+    implementation(project(":mylibrary"))
 }

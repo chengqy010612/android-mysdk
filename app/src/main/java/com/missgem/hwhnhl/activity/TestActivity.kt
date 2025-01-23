@@ -1,27 +1,12 @@
 package com.missgem.hwhnhl.activity
 
-import android.net.Uri
 import android.os.Bundle
-import android.util.Log
-import android.widget.MediaController
-import android.widget.VideoView
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Text
-import androidx.compose.runtime.DisposableEffect
-import androidx.compose.runtime.remember
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.viewinterop.AndroidView
-import androidx.media3.common.C
-import androidx.media3.common.MediaItem
-import androidx.media3.common.MediaMetadata
-import androidx.media3.common.MimeTypes
-import androidx.media3.exoplayer.ExoPlayer
-import androidx.media3.exoplayer.analytics.AnalyticsListener
-import androidx.media3.ui.PlayerView
 import com.example.clientapp.R
 import io.sanghun.compose.video.RepeatMode
 import io.sanghun.compose.video.VideoPlayer
@@ -89,8 +74,8 @@ class TestActivity : ComponentActivity() {
 //                        }
 //                    )
 //                },
-//                modifier = Modifier
-//                    .fillMaxSize()
+                modifier = Modifier
+                    .fillMaxSize()
 //                    .align(Alignment.Center),
             )
 
