@@ -1,8 +1,8 @@
 pluginManagement {
-//    includeBuild("build-logic")
+    includeBuild("build-logic")
 
-    includeBuild("D:\\AndroidStudioProjects\\weui\\core")
-    includeBuild("D:\\AndroidStudioProjects\\weui\\build-logic")
+//    includeBuild("D:\\AndroidStudioProjects\\weui\\core")
+//    includeBuild("D:\\AndroidStudioProjects\\weui\\build-logic")
     repositories {
         google {
             content {
@@ -14,8 +14,8 @@ pluginManagement {
         maven { url = uri("https://artifact.bytedance.com/repository/pangle") }
         mavenCentral()
         gradlePluginPortal()
-        mavenLocal()
-
+//        mavenLocal()
+        maven { url = uri("https://www.jitpack.io" )}
     }
 }
 dependencyResolutionManagement {
@@ -30,6 +30,7 @@ dependencyResolutionManagement {
                 "https://maven.aliyun.com/repository/jcenter"
             )
         }
+        maven { url = uri("https://www.jitpack.io" )}
 
 //穿山甲
         maven { url = uri("https://artifact.bytedance.com/repository/pangle") }
@@ -48,4 +49,6 @@ include(":app")
 //include(":core:data:model")
 //include(":core:data:repository")
 //include(":core:utils")
+
+
 include(":mylibrary")

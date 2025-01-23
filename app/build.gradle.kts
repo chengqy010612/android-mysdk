@@ -112,5 +112,9 @@ dependencies {
 //    implementation(files("./libs/LiteAVSDK_Professional_12.2.0.15072.aar"))
 
 //    implementation("org.example.hello:0.0.3")
-    implementation(project(":mylibrary"))
+//    implementation(project(":mylibrary"))
+
+    implementation("com.github.chengqy010612:android-mysdk:latest.release")
+
+//    implementation(files("./libs2/components-release.aar"))
 }

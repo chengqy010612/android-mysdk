@@ -22,7 +22,7 @@ import com.bytedance.sdk.openadsdk.TTAdConfig
 import com.bytedance.sdk.openadsdk.TTAdConstant
 import com.bytedance.sdk.openadsdk.TTAdNative
 import com.bytedance.sdk.openadsdk.TTAdSdk
-import com.chengqingyuan.mylibrary.PubTest
+//import com.chengqingyuan.mylibrary.PubTest
 import com.example.clientapp.R
 import com.missgem.hwhnhl.feature.splash.SplashRoute
 import com.missgem.hwhnhl.ui.MyApp
@@ -55,11 +55,12 @@ class MainActivity : ComponentActivity() {
 //                        startActivity(intent)
 
 //                        wcLogin()
-                        Log.e(TAG, PubTest.hello())
+//                        Log.e(TAG, PubTest.hello())
 
                     }) {
                         Text(text =  "测试")
                     }
+
 //                    Button(onClick = {
 //////                    wcLogin()
 //                        val intent = Intent(this, TestActivity::class.java)
